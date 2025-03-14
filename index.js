@@ -1,29 +1,10 @@
-import { soma } from "./soma.js";
-import { subtrair } from "./subtrair.js";
-import { dividir } from "./dividir.js";
-import { multiplicar } from "./multiplicar.js";
+import { arrayInvertido } from "./arrayInvertido.js";
+const numbers = [1,2,3,4,5]
+const numeros = [1,2,3,4,5,6,7,8,9,10];
+const numerosInvertidos = [];
+for (let i = numeros.length - 1; i >= 0; i--) {
+    numerosInvertidos.push(numeros[i]);
+}
 
-const num1 = 8;
-const num2 = 2;
-const operaçao = "/";
-let result;
-switch (operaçao) {
-    case "+":
-        result = soma(num1,num2);
-        break;
-    case "-":
-    result = subtrair (num1,num2);
-    break;
-    case "*":
-        result = multiplicar (num1,num2);
-        break;
-    case "/":
-        result = dividir (num1,num2);
-        break;
-        default:
-            console.log("Operação invalida.");
-            result = null;
-}
-if (result !== null) {
-    console.log(`O resultado da operação ${num1} ${operaçao} ${num2} é: ${result}`);
-}
+console.log("Array:" , numeros);
+console.log("Array invertido:", numerosInvertidos);
